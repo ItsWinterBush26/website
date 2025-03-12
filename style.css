@@ -79,6 +79,10 @@ main {
 .sodium-card {
   border-top: 4px solid #4CAF50;
 }
+.about-card {
+  border-top: 4px solid #0A4EFF;
+  
+}
 
 .card h2 {
   font-size: 1.7rem;
@@ -112,6 +116,9 @@ main {
   background-color: #cc0000;
   transform: scale(1.05);
 }
+.blue-button {
+  background-color: #0A4EFF
+}
 
 .green-button {
   background-color: #4CAF50;
@@ -133,7 +140,6 @@ main {
   font-size: 1.4rem;
   margin-right: 8px;
 }
-
 footer {
   text-align: center;
   margin-top: 50px;
