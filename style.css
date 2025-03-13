@@ -75,9 +75,16 @@ main {
 .youtube-card {
   border-top: 4px solid #ff0000;
 }
+.create-card {
+  border-top: 4px solid #986806;
+}
 
 .sodium-card {
   border-top: 4px solid #4CAF50;
+}
+
+.download-card {
+  border-top: 4px solid #989898;
 }
 .about-card {
   border-top: 4px solid #0A4EFF;
@@ -119,9 +126,20 @@ main {
 .blue-button {
   background-color: #0A4EFF
 }
+.blue-button:hover {
+  background-color: #0A4EFF
+}
 
 .green-button {
   background-color: #4CAF50;
+}
+
+.white-button {
+  background-color: #989898;
+}
+
+.white-button:hover {
+  background-color: #989898
 }
 
 .green-button:hover {
