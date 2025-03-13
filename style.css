@@ -86,6 +86,9 @@ main {
 .download-card {
   border-top: 4px solid #989898;
 }
+. tutorial-card {
+  border-top: 4px solid #989898;
+}
 .about-card {
   border-top: 4px solid #0A4EFF;
   
