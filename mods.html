@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ItsWinterBush Page</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-  <body>
-    <h1>How to install my mods</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItsWinterBush Page|How To</title>
+    <style>
+        /* Make the video container responsive */
+        video {
+            max-width: 100%;  /* Make video responsive */
+            height: auto;     /* Maintain aspect ratio */
+            display: block;   /* Remove bottom space (like inline-block) */
+            margin: 0 auto;   /* Center the video horizontally */
+        }
+        
+        /* Optional: Add styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
 
-    <video width="320" height="240" controls>
-  <source src="howto.mp4" type="video/mp4">
-Your browser does not support the video tag.
-    </video>
-  </body>
-    
+        /* Ensure video container adapts to screen sizes */
+        .video-container {
+            width: 100%; /* Ensure container uses full width */
+            max-width: 800px; /* Limit max width */
+            margin: 0 auto; /* Center the video container */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>How To Install My Mods</h1>
+
+    <div class="video-container">
+        <video controls>
+            <source src="howto.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</body>
+</html>
