@@ -1,4 +1,4 @@
-zm* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -76,7 +76,7 @@ main {
   border-top: 4px solid #ff0000;
 }
 .tiktok-card {
-  border-top: 4px solid #000000
+  border-top: 4px solid #000000;
 }
 .create-card {
   border-top: 4px solid #986806;
