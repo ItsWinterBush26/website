@@ -75,6 +75,9 @@ main {
 .youtube-card {
   border-top: 4px solid #ff0000;
 }
+.tiktok-card {
+  border-top: 4px solid #FFFFFF
+}
 .create-card {
   border-top: 4px solid #986806;
 }
@@ -121,16 +124,18 @@ main {
   margin-top: 10px;
   justify-content: center;
 }
-
 .button:hover {
   background-color: #cc0000;
   transform: scale(1.05);
 }
+.black-button {
+  backgroud-color: #000000;
+}
 .blue-button {
-  background-color: #0A4EFF
+  background-color: #0A4EFF;
 }
 .blue-button:hover {
-  background-color: #0A4EFF
+  background-color: #0A4EFF;
 }
 
 .green-button {
@@ -142,7 +147,7 @@ main {
 }
 
 .white-button:hover {
-  background-color: #989898
+  background-color: #989898;
 }
 
 .green-button:hover {
