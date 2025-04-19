@@ -1,8 +1,8 @@
-* {
+zm* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tvahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -76,7 +76,7 @@ main {
   border-top: 4px solid #ff0000;
 }
 .tiktok-card {
-  border-top: 4px solid #FFFFFF
+  border-top: 4px solid #000000
 }
 .create-card {
   border-top: 4px solid #986806;
