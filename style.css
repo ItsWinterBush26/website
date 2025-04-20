@@ -36,7 +36,6 @@ body::before {
   padding: 20px;
   z-index: 1;
 }
- h
 header {
   text-align: center;
   padding: 20px 0 40px;
@@ -75,12 +74,15 @@ main {
 .youtube-card {
   border-top: 4px solid #ff0000;
 }
+
 .tiktok-card {
   border-top: 4px solid #000000;
 }
+
 .facebook-card {
   border-top: 4px solid #0A4EFF;
 }
+
 .create-card {
   border-top: 4px solid #986806;
 }
@@ -95,6 +97,7 @@ main {
 .tutorial-card {
   border-top: 4px solid #989898;
 }
+
 .about-card {
   border-top: 4px solid #0A4EFF;
   
