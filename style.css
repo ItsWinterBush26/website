@@ -1,75 +1,84 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tvahoma, Geneva, Verdana, sans-serif;
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
 }
 
 body {
-  background-image: url('images.jpeg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;  
-  color: white;    
-  min-height: 100vh;
-  display: flex;    
-  justify-content: center;
-  align-items: center;
-  position: relative;  
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-image.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  padding: 20px;
-  z-index: 1;
-}
 header {
-  text-align: center;
-  padding: 20px 0 40px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
 }
 
-h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: #fff;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 25px;
-  width: 100%;
-  max-width: 450px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.nav-links {
+    display: flex;
+    list-style: none;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.nav-links li {
+    margin-left: 2rem;
 }
 
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    border-top: 4px solid #986806;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
 .youtube-card {
   border-top: 4px solid #ff0000;
 }
@@ -98,19 +107,6 @@ main {
   border-top: 4px solid #0A4EFF;
   
 }
-
-.card h2 {
-  font-size: 1.7rem;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.card p {
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-}
-
 .button {
   display: flex;
   align-items: center;
@@ -204,23 +200,20 @@ main {
   margin-right: 8px;
 }
 footer {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px 0;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+    border-top: 4px solid #986806;
 }
 
+/* Add responsive design */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .card {
-    padding: 20px;
-  }
-
-  .button {
-    padding: 10px 15px;
-  }
+    nav {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+    }
+    
+    .nav-links li {
+        margin: 0 0.5rem;
+    }
 }

@@ -1,0 +1,44 @@
+<html>
+    <head>
+   <link rel="stylesheet" href="div.css">
+    </head>
+    <main>
+        <body>
+            <div class="menu-container">
+  <div class="menu-icon" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+<div class="menu-links" id="menuLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    </div>
+     
+<div id="home" class="content-section">
+  <div id="about" class="content-section">
+      
+  </div>
+</div>
+<div id="about" class="content-section" style="display:none;">
+  Learn more About us here.
+</div>
+<div id="services" class="content-section" style="display:none;">
+  Our Services include...
+</div>
+<div id="contact" class="content-section" style="display:none;">
+  Contact us at...
+</div>
+  </div>
+<script>
+function toggleMenu(x) {
+  x.classList.toggle("change");
+  document.getElementById("menuLinks").style.display =
+    document.getElementById("menuLinks").style.display === "flex" ? "none" : "flex";
+}
+</script>
+</main>
+</bosy>
+</html>
