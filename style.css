@@ -90,10 +90,23 @@ nav {
 .facebook-card {
   border-top: 4px solid #0A4EFF;
 }
+
 .ig-card {
-    border-top: 4px ;
-    border-image: url("3mz.png");
+    position: relative;
+    padding-top: 5px;
 }
+.ig-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-image: url('3mz.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+    
 .create-card {
   border-top: 4px solid #986806;
 }
