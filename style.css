@@ -91,7 +91,8 @@ nav {
   border-top: 4px solid #0A4EFF;
 }
 .ig-card {
-    border-top: 4px solid #ff0073
+    border-top: 4px ;
+    border-image: url("3mz.png");
 }
 .create-card {
   border-top: 4px solid #986806;
@@ -170,18 +171,18 @@ nav {
 }
 .ig {
     background-image: url("3mz.png");
-     display: flex;
-  align-item: center;
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  justify-content: center;
+    display: flex;
+    align-item: center;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    justify-content: center;
 }
 .white-button {
   background-color: #989898;
