@@ -69,8 +69,8 @@ nav {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
+    padding: 0.rem 1.5rem;
+    border-radius: 2px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -145,30 +145,10 @@ nav {
   margin-top: 10px;
   justify-content: center;
 }
-.fb {
-    display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  background-color: #0A4EFF;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  justify-content: center;
-}
+
 .button:hover {
   background-color: #cc0000;
   transform: scale(1.05);
-}
-.blue-button {
-  background-color: #0A4EFF;
-}
-.blue-button:hover {
-  background-color: #0A4EFF;
 }
 
 .green-button {
@@ -188,13 +168,6 @@ nav {
     cursor: pointer;
     margin-top: 10px;
     justify-content: center;
-}
-.white-button {
-  background-color: #989898;
-}
-
-.white-button:hover {
-  background-color: #989898;
 }
 
 .green-button:hover {
