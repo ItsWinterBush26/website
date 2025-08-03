@@ -155,7 +155,7 @@ nav {
 }
 .fb {
     display: flex;
-  align-item: center;
+  align-items: center;
   padding: 12px 20px;
   background-color: #0A4EFF;
   color: white;
@@ -185,7 +185,7 @@ nav {
 .ig {
     background-image: url("3mz.png");
     display: flex;
-    align-item: center;
+    align-items: center;
     padding: 12px 20px;
     color: white;
     text-decoration: none;
