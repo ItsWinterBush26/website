@@ -156,6 +156,7 @@ nav {
 }
 .ig {
     background-image: url("3mz.png");
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 12px 20px;
