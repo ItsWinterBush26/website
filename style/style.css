@@ -12,7 +12,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-image.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero-image.jpg');
     background-size: cover;
     color: white;
     text-align: center;
@@ -55,7 +55,7 @@ nav {
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-image.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero-image.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -97,7 +97,7 @@ nav {
   left: 0;
   height: 5px;
   width: 100%;
-  background-image: url('3mz.png');
+  background-image: url('/images/3mz.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -154,7 +154,7 @@ nav {
   background-color: #4CAF50;
 }
 .ig {
-    background-image: url("3mz.png");
+    background-image: url("/images/3mz.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
