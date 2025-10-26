@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Litematica Guide | ItsWinterBush</title>
+  <link rel="icon" href="src/IMG_20250801_215228.png" type="image/png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How to Install Litematica in PojavLauncher (Android)</title>
+  <style>
+    :root {
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass:rgba(255,255,255,0.03);
+    }
+    html,body {
+      height:100%;
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#071026 0%, #07172a 100%);
+      color:#e6eef6;
+    }
+    /* --- NAV MENU --- */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 36px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-toggle span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: var(--accent);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: -240px;
+      width: 220px;
+      height: 100%;
+      background: rgba(10,15,30,0.96);
+      box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+      transition: left 0.3s ease;
+      padding-top: 80px;
+      z-index: 1000;
+    }
+    nav.active {
+      left: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      margin: 14px 0;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 10px 20px;
+      display: block;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* --- MAIN CONTENT --- */
+    .container {
+      max-width:900px;
+      margin:80px auto 32px auto;
+      padding:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;
+      box-shadow:0 6px 30px rgba(2,6,23,0.6);
+    }
+    header {
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    header h1 {
+      margin:0;
+      font-size:1.4rem;
+    }
+    header p {
+      margin:0;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+    .section {
+      background:var(--glass);
+      padding:16px;
+      border-radius:10px;
+      margin-top:18px;
+      overflow-x:auto;
+    }
+    h2 {
+      margin:6px 0 12px 0;
+      font-size:1.05rem;
+    }
+    ul {
+      margin:8px 0 12px 24px;
+    }
+    code, pre {
+      background:rgba(0,0,0,0.25);
+      padding:6px 8px;
+      border-radius:6px;
+      color:#dffcf0;
+      font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+      white-space:pre-wrap;
+      word-break:break-all;
+      overflow-x:auto;
+      max-width:100%;
+      box-sizing:border-box;
+    }
+    .file-structure {
+      font-family:ui-monospace;
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:12px;
+      border-radius:8px;
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+    }
+    td,th {
+      padding:8px;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      text-align:left;
+    }
+    .note {
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:12px;
+    }
+    .cta {
+      display:inline-block;
+      margin-top:14px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:linear-gradient(90deg,#0b1b28,#072033);
+      text-decoration:none;
+      color:var(--accent);
+      border:1px solid rgba(110,231,183,0.12);
+    }
+    footer {
+      margin-top:18px;
+      color:var(--muted);
+      font-size:0.85rem;
+    }
+    @media (max-width:640px){
+      .container{margin:80px 16px 16px 16px;padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <!-- HAMBURGER MENU -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAV SIDEBAR -->
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="mymods.html">📦 Download</a></li>
+      <li><a href="socials.html">💬 Socials</a></li>
+      <li><a href="mydevice.html">📱Device</a></li>
+      <li><a href="guide.html">🦮 Guide</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header>
+      <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#06202c,#08313e);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)"><img width=50px hight=50px src="src/IMG_20250801_215228.png"></div>
+      <div>
+        <h1>How to Install <strong>Litematica</strong> in <strong>Zalithlauncher, Zalithlauncher2 and others</strong> (Android)</h1>
+        <p>Step-by-step guide — copyable, mobile-friendly, and ready to share.</p>
+      </div>
+    </header><section class="section">
+  <h2>What you’ll need</h2>
+  <ul>
+    <li><strong>Zalithlauncher2 or your prepared one</strong> (latest recommended build)</li>
+    <li><strong>Minecraft Java Edition</strong> any version will work</li>
+    <li><strong>Fabric loader</strong> (Litematica needs Fabric)</li>
+    <li><strong>Litematica .jar</strong> and its dependency <strong>Malilib .jar</strong></li>
+    <li>A file manager on Android (Files, ZArchiver, or MT Manager)</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Step 1 — Install Fabric Loader</h2>
+  <ol>
+    <li>Open <strong>Zalithlauncher2</strong>.</li>
+    <li>Click on <em>Download icon → Install Minecraft with fabric loader selected</em>.</li>
+    <li>Choose the <strong>Minecraft version</strong> that matches your Litematica build (e.g., 1.21.8) and tap <strong>Install</strong>.</li>
+    <li>After installation, you should see an entry like <code>fabric-loader-1.21.8</code> in your version list.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>Step 2 — Locate your game folder</h2>
+  <p>In Zalithlauncher2, go to files <strong>Zalithlauncher2 icon</strong> (📁) on the main screen to open the game directory. Navigate to:</p>
+  <pre>/android/data/com.movtery.zalithlauncher.v2/android_data/files/.minecraft/versions/1.21.8 Fabric/</pre>
+  <p>If a <code>mods</code> folder doesn't exist, create it.</p>
+</section>
+
+<section class="section">
+  <h2>Step 3 — Download and add the mods</h2>
+  <ol>
+    <li>Download these .jar files from trusted sources (Modrinth or CurseForge):
+      <ul>
+        <li><strong>Litematica</strong> (matching Minecraft version)</li>
+        <li><strong>Malilib</strong> (matching version)</li>
+      </ul>
+    </li>
+    <li>Using your file manager, move the .jar files into:
+      <pre>/android/data/com.movtery.zalithlauncher.v2/android_data/files/.minecraft/versions/1.21.8 Fabric/mods/</pre>
+    </li>
+  </ol>
+  <p class="note">Tip: Keep files named clearly, e.g., <code>litematica-1.21.8.jar</code> and <p><code>malilib-1.21.8.jar</code>.</p>
+</section>
+
+<section class="section">
+  <h2>Step 4 — Launch the game</h2>
+  <ol>
+    <li>Open PojavLauncher and select the Fabric entry you installed (e.g., <code>fabric-loader-1.21.8</code>).</li>
+    <li>Tap <strong>Play</strong>.</li>
+    <li>Once in-game, open the <strong>Mods</strong> menu to verify that <em>Litematica</em> and <em>Malilib</em> appear.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>Step 5 — Using Litematica</h2>
+  <p>Controls and basic usage:</p>
+  <ul>
+    <li>Open the Litematica menu with <code>M in your controls</code> (in-game).</li>
+    <li>To load schematics, place <code>examplebuold.litematic</code> files in:
+      <pre>/android/data/com.movtery.zalithlauncher.v2/android_data/files/.minecraft/versions/1.21.8 Fabric/schematics/</pre>
+      (Create the <code>schematics</code> folder if needed.)
+    </li>
+    <li>In-game → Litematica → Load Schematics → select your file and adjust placement.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Common issues &amp; fixes</h2>
+  <table>
+    <thead>
+      <tr><th>Problem</th><th>Solution</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Game crashes on start</td><td>Use matching versions of Fabric, Litematica, and Malilib.</td></tr>
+      <tr><td>No "Mods" button appears</td><td>Ensure you launched the Fabric loader version (not vanilla).</td></tr>
+      <tr><td>Can’t find <code>.minecraft</code></td><td>Enable "show hidden files" in your file manager and check <code>/games/PojavLauncher/</code>.</td></tr>
+      <tr><td>Schematics not showing</td><td>Place <code>.litematic</code> files in the correct <code>schematics/</code> folder.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Example file structure</h2>
+  <div class="file-structure">
+
+<pre>/android/data/com.movtery.zalithlauncher.v2/android_data/files/.minecraft/versions/1.21.8 Fabric/
+├── mods/
+│   ├── litematica-fabric-1.21.8.jar
+│   └── malilib-fabric-1.21.8.jar
+├── schematics/
+│   └── myhouse.litematic
+├── config/
+└── saves/</pre></div>
+</section>
+
+<section class="section">
+  <h2>Notes &amp; tips</h2>
+  <ul>
+    <li>Litematica requires <strong>Fabric</strong> — it will <em>not</em> work on Forge.</li>
+    <li>If your device struggles with large schematics, lower render distance and disable fancy graphics.</li>
+    <li>Consider using performance mods like <strong>Iris</strong> + <strong>Sodium</strong> if available for your setup.</li>
+  </ul>
+</section>
+
+    <footer>
+      <p class="note">Created: Oct 26, 2025</p>
+      &copy; 2025 ItsWinterBush Page. All rights reserved
+    </footer>
+  </main>
+
+  <script>
+    const menu = document.getElementById('navMenu');
+    const toggle = document.querySelector('.menu-toggle');
+    function toggleMenu(){
+      menu.classList.toggle('active');
+      toggle.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
