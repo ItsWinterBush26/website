@@ -195,6 +195,64 @@
       <p>Want to know the device I use in my videos?  
         <button class="cta-button" onclick="document.location='mydevice.html'">Check My Device</button>
       </p>
+
+      <code>#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+}
+
+void displayLyrics(const char* line1, const char* line2, int displayTime) {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(line1);
+  lcd.setCursor(0, 1);
+  lcd.print(line2);
+  delay(displayTime);
+}
+
+void loop() {
+  displayLyrics("You keep me", "under your spell", 800);
+
+  displayLyrics("Its like I", "waited so long", 600);
+
+  displayLyrics("But all the", "scars you see", 500);
+
+  displayLyrics("The're permanent", "and i'm not", 500);
+
+  displayLyrics("I want Innocent ", "love,", 600);
+
+  lcd.clear();
+  lcd.print("the rest of time"); delay(800);
+
+  displayLyrics("But all the", "scars you see", 500);
+  displayLyrics("When I take", "my clothes off", 500);
+
+  lcd.clear(); lcd.print("Oh,"); delay(400);
+  lcd.setCursor(1, 1);
+  lcd.print("Ah, ah,"); delay(500);
+  lcd.clear();
+  lcd.print("uh, ah,"); delay(500);
+  lcd.clear();
+  lcd.setCursor(1, 1);
+  lcd.print("ah, ah"); delay(500);
+
+  displayLyrics("There permanent", "and i'm not", 450);
+
+  lcd.clear(); lcd.print("Oh,"); delay(400);
+  lcd.setCursor(1, 1);
+  lcd.print("Ah, ah,"); delay(500);
+  lcd.clear();
+  lcd.print("uh, ah,"); delay(500);
+  lcd.clear();
+  lcd.setCursor(1, 1);
+  lcd.print("ah, ah"); delay(500);
+
+  displayLyrics("They're perm'nent", "and i'm not", 500);
+}</code>
     </section>
 
     <footer>
